@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kegels</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script src="howler.min.js"></script>
+<script src="kegels.js"></script>
+</head> 
+<body>
+	<!-- /page -->
+	<div data-role="page" id="home-page">
+		<div data-role="header">
+			<h1>Kegels</h1>
+		</div>
+		<!-- /content -->
+		<div class="ui-content" role="main">
+			<div id="kegel-progress-container" style="display:none;">
+				<div id="timermessage" style="font-size:200%;text-align:center;"></div>
+				<div id="progressbarcontainer" style="margin-bottom:1em;margin-top:1em"></div>
+  <div class="ui-grid-a">
+  <div class="ui-block-a">
+                <div class="ui-btn ui-input-btn ui-corner-all">
+                  Pause
+                  <input id="pause-button" type="button" data-corners="true" data-enhanced="true" value="Pause"></input>
+                </div>
+   </div><div class="ui-block-b">
+				<div class="ui-btn ui-input-btn ui-corner-all">
+				  Cancel
+				  <input id="cancel-button" type="button" data-corners="true" data-enhanced="true" value="Cancel"></input>
+				</div>
+     </div></div>
+			</div>
+			<div id="start-button-container">
+				<fieldset id="optionsFieldset" data-role="controlgroup" style="margin-bottom: 1em;">
+					<legend>Options</legend>
+					<input id="beep-checkbox" type="checkbox" value="true" /> <label for="beep-checkbox">Beeps</label>
+					<input id="vibrate-checkbox" type="checkbox" value="true" disabled="disabled" style="display:none" /> <label id="vibrate-checkbox-label" for="vibrate-checkbox" style="display:none">Vibrate</label>
+					<input id="flashes-checkbox" type="checkbox" value="true" /> <label for="flashes-checkbox">Flashes</label>
+				</fieldset>
+				
+				<fieldset id="typeFieldset" data-role="controlgroup" data-type="horizontal" style="margin-bottom: 2em;">
+					<legend>Type</legend>
+					<input id="short-type-radio" name="type" type="radio" value="short" /> <label for="short-type-radio">Short</label>					
+					<input id="normal-type-radio" name="type" type="radio" value="normal" /> <label for="normal-type-radio">Normal</label>					
+					<input id="advanced-type-radio" name="type" type="radio" value="advanced" /> <label for="advanced-type-radio">Advanced</label>					
+				</fieldset>
+
+				<div class="ui-btn ui-input-btn ui-corner-all">
+				  Start
+				  <input id="start-button" type="button" data-corners="true" data-enhanced="true" value="Start"></input>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
